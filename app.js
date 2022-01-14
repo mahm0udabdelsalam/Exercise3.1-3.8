@@ -82,7 +82,7 @@ app.delete('/api/persons/:id', (req,res) => {
 
 
 
-// Exercise 3.4
+// Exercise 3.5
 const generateID= () => {
     const maxId = persons.length > 0
         ? Math.max(...persons.map(n => n.id))
@@ -98,6 +98,7 @@ app.post('/api/persons', (req, res) => {
         name: body.name,
         number: body.number
     }
+    // Exercise 3.6
     if (!body) {
         return res.status(400).json({ 
         error: 'content missing' 
